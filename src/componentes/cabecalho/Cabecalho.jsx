@@ -11,7 +11,7 @@ function Cabecalho() {
         }}
       />
 
-      <Avatar nome="João" />
+      
     </header>
   );
 }
