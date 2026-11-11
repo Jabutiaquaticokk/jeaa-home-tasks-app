@@ -1,18 +1,20 @@
-import './App.css'
-import Cabecalho from './componentes/Cabecalho/Cabecalho'
-import Principal from './componentes/principal/Principal'
-import Rodape from './componentes/rodape/Rodape'
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from 'react-toastify';
+
+import "./App.css";
+import Cabecalho from "./componentes/Cabecalho/Cabecalho";
+import Rodape from "./componentes/Rodape/Rodape";
+import Roteador from "./Roteador";
 
 function App() {
-
   return (
     <>
       <Cabecalho />
-      <Principal />
+      <Roteador />
       <Rodape />
+      <ToastContainer />
     </>
-
-  )
+  );
 }
 
-export default App
+export default App;
