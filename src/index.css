@@ -13,7 +13,7 @@ body,
 
 #root {
     display: grid;
-    grid-template-rows: 48px 1fr 48px;
+    grid-template-rows: 128px 1fr 48px;
 }
 
 a {

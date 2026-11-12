@@ -1,17 +1,20 @@
+import { UserRound } from "lucide-react";
 import "./Cabecalho.css";
 
 function Cabecalho() {
   return (
-    <header className="Cabecalho_root">
-      <img
-        src="/favicon.svg"
-        style={{
-          width: "24px",
-          height: 24,
-        }}
-      />
-
+    <header className="header">
       
+      <div className="saudacao">
+        <h1>Olá, José! 👋</h1>
+
+        <span>Vamos organizar nossas tarefas!</span>
+      </div>
+
+      <button className="usuario-btn">
+        <UserRound />
+      </button>
+
     </header>
   );
 }

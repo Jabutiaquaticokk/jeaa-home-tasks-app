@@ -1,14 +1,3 @@
-.Principal_root{
-    background-color: var(--cor-fundo-padrao);
-    padding: 16px 8px;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    color: black;
-}
-
-.Principal_titulo{
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+main {
+    padding-bottom: 110px;
 }

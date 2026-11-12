@@ -1,8 +1,40 @@
 .Rodape_root {
-  background-color: var(--cor-primaria-clara);
+  position: fixed;
+  bottom: 20px;
+  left: 5%;
+  width: 90%;
+  height: 75px;
+
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  color: var(--cor-texto-claro);
+
+  background: #ffffff;
+  border-radius: 25px;
+  border-top: 1px solid #e5e5e5;
+  border: 1px solid #e8eee9;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+
+  z-index: 1000;
+}
+
+.Rodape_root a{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+
+  text-decoration: none;
+  color: #84948a;
   font-size: 12px;
+}
+
+.Rodape_root svg {
+  width: 23px;
+  height: 23px;
+}
+
+.Rodape_root a.active {
+  color: #23834e;
+  font-weight: bold;
 }
