@@ -14,9 +14,9 @@ export default defineConfig({
        'apple-touch-icon.png',
      ],
      manifest: {
-       name: 'Aulas Aplicativo com ReactJS + PWA',
-       short_name: 'Aulas Aplicativo PWA',
-       description: 'Aplicativo de aulas utilizando ReactJS e PWA',
+       name: 'Home Tasks App',
+       short_name: 'Home Tasks',
+       description: 'Aplicativo de gerenciamento de tarefas utilizando ReactJS e PWA',
        theme_color: '#3f50b5',
        background_color: '#f7f7f7',
        display: 'standalone',
