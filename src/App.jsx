@@ -7,9 +7,9 @@ import Roteador from "./Roteador";
 function App() {
   return (
     <>
-      {/* <Cabecalho /> */}
+      <Cabecalho />
       <Roteador />
-      {/* <Rodape /> */}
+      <Rodape />
     </>
   );
 }
