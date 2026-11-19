@@ -1,6 +1,6 @@
 import "./App.css";
 import Cabecalho from "./componentes/Cabecalho/Cabecalho";
-import Rodape from "./componentes/Rodape/Rodape";
+import Rodape from "./componentes/Rodape/Rodape.jsx";
 import Roteador from "./Roteador";
 
 function App() {
