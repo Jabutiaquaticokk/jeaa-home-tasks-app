@@ -1,7 +1,9 @@
+
 .Rodape_root {
   position: fixed;
   bottom: 20px;
   left: 5%;
+
   width: 90%;
   height: 75px;
 
@@ -11,30 +13,40 @@
 
   background: #ffffff;
   border-radius: 25px;
-  border-top: 1px solid #e5e5e5;
-  border: 1px solid #e8eee9;
+
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
 
   z-index: 1000;
 }
 
-.Rodape_root a{
+.nav-item {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+
   gap: 5px;
 
-  text-decoration: none;
+  border: none;
+  background: transparent;
+
   color: #84948a;
   font-size: 12px;
+
+  cursor: pointer;
+  transition: all 0.25s ease;
 }
 
-.Rodape_root svg {
-  width: 23px;
-  height: 23px;
-}
-
-.Rodape_root a.active {
+.nav-item.active {
   color: #23834e;
   font-weight: bold;
+  transform: translateY(-3px);
+}
+
+.nav-item svg {
+  transition: transform 0.25s ease;
+}
+
+.nav-item.active svg {
+  transform: scale(1.12);
 }
