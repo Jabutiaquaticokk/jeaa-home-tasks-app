@@ -1,6 +1,7 @@
 
 import { useState } from "react";
 import "./CriarTask.css";
+// import { salvarLocalStorage } from "../../servicos/localStorage.servico";
 
 function CriarTask() {
   const [nome, setNome] = useState("");
@@ -31,6 +32,10 @@ function CriarTask() {
     setHorario("");
     setRepeticao("nao");
   }
+
+  // const salvar = () => {
+  //   salvarLocalStorage(tarefa)
+  // }
 
   return (
     <main className="criar-page">
