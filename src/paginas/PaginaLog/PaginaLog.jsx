@@ -2,16 +2,19 @@ import Principal from "../../componentes/Principal/Principal";
 
 
 function PaginaLog() {
-    return <Principal>
+
+
+    return (
+    <Principal>
         <div className="pagina-log">
             <h1>Home Tasks</h1>
-
+        
         </div>
 
         <div>
             
         </div>
-    </Principal>;
+    </Principal>);
 }
 
 export default PaginaLog;

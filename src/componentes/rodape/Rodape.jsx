@@ -5,6 +5,7 @@ import "./Rodape.css";
 function Rodape() {
 
   const [active, setActive] = useState('home');
+  
 
   const menuItems = [
     { id: "inicio", label: "Início", icon: House },
