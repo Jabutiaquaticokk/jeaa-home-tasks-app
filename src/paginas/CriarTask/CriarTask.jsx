@@ -65,25 +65,14 @@ function CriarTask() {
   return (
     <main className="criar-page">
 
-      <h2 className="page-title">CRIAR TASK</h2>
 
       <section className="task-card">
 
         <header className="task-header">
           <div>
-            <small>HOME TASKS</small>
             <h1>Criar task</h1>
           </div>
 
-          <div className="header-actions">
-            <button type="button" className="avatar">
-              👤
-            </button>
-
-            <button type="button" className="menu-button">
-              ☰
-            </button>
-          </div>
         </header>
 
         <div className="form-intro">
