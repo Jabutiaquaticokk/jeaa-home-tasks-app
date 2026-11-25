@@ -11,13 +11,11 @@ import CriarTask from "./paginas/CriarTask/CriarTask";
 
 
 import Rodape from "./componentes/rodape/Rodape";
-import Cabecalho from "./componentes/cabecalho/Cabecalho";
 
 function Roteador() {
   return (
     <BrowserRouter>
 
-      <Cabecalho />
       <Routes>
 
         <Route
