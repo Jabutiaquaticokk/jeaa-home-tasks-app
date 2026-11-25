@@ -1,0 +1,53 @@
+
+.tasks-page {
+  padding: 20px 15px 110px;
+}
+
+.tasks-page h1 {
+  color: #174e43;
+  margin-bottom: 8px;
+}
+
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+
+  background: #ffffff;
+  padding: 15px;
+  margin-top: 12px;
+
+  border-radius: 14px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.05);
+}
+
+.task-info h3 {
+  color: #174e43;
+  font-size: 15px;
+}
+
+.task-info p,
+.task-info small {
+  color: #84948a;
+  font-size: 12px;
+}
+
+.task-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.task-actions button {
+  border: none;
+  background: #edf4ef;
+  color: #174e43;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.concluida {
+  text-decoration: line-through;
+  opacity: 0.5;
+}

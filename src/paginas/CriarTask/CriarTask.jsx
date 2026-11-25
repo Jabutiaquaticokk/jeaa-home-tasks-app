@@ -1,8 +1,21 @@
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./CriarTask.css";
 
+const STORAGE_KEY = "hometasks_tarefas";
+
 function CriarTask() {
+
+  // Recupera as tarefas salvas no navegador
+  const [tarefas, setTarefas] = useState(() => {
+    try {
+      const dados = localStorage.getItem(STORAGE_KEY);
+      return dados ? JSON.parse(dados) : [];
+    } catch {
+      return [];
+    }
+  });
+
   const [nome, setNome] = useState("");
   const [descricao, setDescricao] = useState("");
   const [data, setData] = useState("");
@@ -10,39 +23,71 @@ function CriarTask() {
   const [repeticao, setRepeticao] = useState("nao");
   const [mensagem, setMensagem] = useState("");
 
-  function criarTarefa(e) {
-    e.preventDefault();
+  // Salva automaticamente sempre que a lista mudar
+  useEffect(() => {
+    localStorage.setItem(
+      STORAGE_KEY,
+      JSON.stringify(tarefas)
+    );
+  }, [tarefas]);
 
-    const tarefa = {
-      nome,
-      descricao,
-      data,
-      horario,
-      repeticao
-    };
-
-    console.log("Tarefa criada:", tarefa);
-
-    setMensagem("Tarefa cadastrada com sucesso!");
-
+  // Limpa os campos do formulário
+  function limparFormulario() {
     setNome("");
     setDescricao("");
     setData("");
     setHorario("");
     setRepeticao("nao");
+    setMensagem("");
   }
 
+  // Cadastra uma nova tarefa
+  function criarTarefa(e) {
+    e.preventDefault();
+
+    const novaTarefa = {
+      id: Date.now(),
+      nome,
+      descricao,
+      data,
+      horario,
+      repeticao,
+      concluida: false,
+      criadaEm: new Date().toISOString()
+    };
+
+    setTarefas((tarefasAtuais) => [
+      ...tarefasAtuais,
+      novaTarefa
+    ]);
+
+    setMensagem("Tarefa criada com sucesso!");
+
+    limparFormulario();
+  }
 
   return (
     <main className="criar-page">
+
+      <h2 className="page-title">CRIAR TASK</h2>
 
       <section className="task-card">
 
         <header className="task-header">
           <div>
+            <small>HOME TASKS</small>
             <h1>Criar task</h1>
           </div>
 
+          <div className="header-actions">
+            <button type="button" className="avatar">
+              👤
+            </button>
+
+            <button type="button" className="menu-button">
+              ☰
+            </button>
+          </div>
         </header>
 
         <div className="form-intro">
@@ -119,9 +164,9 @@ function CriarTask() {
           </button>
 
           <button
-            type="reset"
+            type="button"
             className="cancel-button"
-            onClick={() => setMensagem("")}
+            onClick={limparFormulario}
           >
             Cancelar
           </button>
@@ -135,6 +180,7 @@ function CriarTask() {
         </form>
 
       </section>
+
     </main>
   );
 }
