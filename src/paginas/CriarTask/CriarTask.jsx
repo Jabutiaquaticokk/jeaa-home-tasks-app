@@ -6,7 +6,6 @@ const STORAGE_KEY = "hometasks_tarefas";
 
 function CriarTask() {
 
-  // Recupera as tarefas salvas no navegador
   const [tarefas, setTarefas] = useState(() => {
     try {
       const dados = localStorage.getItem(STORAGE_KEY);
@@ -23,7 +22,6 @@ function CriarTask() {
   const [repeticao, setRepeticao] = useState("nao");
   const [mensagem, setMensagem] = useState("");
 
-  // Salva automaticamente sempre que a lista mudar
   useEffect(() => {
     localStorage.setItem(
       STORAGE_KEY,
@@ -31,7 +29,6 @@ function CriarTask() {
     );
   }, [tarefas]);
 
-  // Limpa os campos do formulário
   function limparFormulario() {
     setNome("");
     setDescricao("");
@@ -41,7 +38,6 @@ function CriarTask() {
     setMensagem("");
   }
 
-  // Cadastra uma nova tarefa
   function criarTarefa(e) {
     e.preventDefault();
 
