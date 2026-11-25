@@ -1,25 +1,46 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import PaginaLog from "./paginas/PaginaLog/PaginaLog";
-import CriarTask from "./paginas/CriarTask/CriarTask";
-import PaginaTarefas from "./paginas/PaginaTarefas/PaginaTarefas";
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  Navigate
+} from "react-router-dom";
 
-const router = createBrowserRouter([
-  {
-    path: "",
-    element: <PaginaLog />,
-  },
-  {
-    path: "create-task",
-    element: <CriarTask />,
-  },
-  {
-    path: "tasks",
-    element: <PaginaTarefas />,
-  },
-]);
+import Inicio from "./paginas/Inicio/Inicio";
+import Tasks from "./paginas/Tasks/Tasks";
+import CriarTask from "./paginas/CriarTask/CriarTask";
+
+
+import Rodape from "./componentes/rodape/Rodape";
+import Cabecalho from "./componentes/cabecalho/Cabecalho";
 
 function Roteador() {
-  return <RouterProvider router={router} />;
+  return (
+    <BrowserRouter>
+
+      <Cabecalho />
+      <Routes>
+
+        <Route
+          path="/"
+          element={<Navigate to="/inicio" replace />}
+        />
+
+        <Route path="/inicio" element={<Inicio />} />
+
+        <Route path="/tasks" element={<Tasks />} />
+
+        <Route path="/criar" element={<CriarTask />} />
+
+        {/* <Route path="/pesquisar" element={<Pesquisar />} />
+
+        <Route path="/perfil" element={<Perfil />} /> */}
+
+      </Routes>
+
+      <Rodape />
+
+    </BrowserRouter>
+  );
 }
 
 export default Roteador;

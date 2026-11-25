@@ -1,7 +1,7 @@
 import Principal from "../../componentes/Principal/Principal";
 
 
-function PaginaLog() {
+function Inicio() {
 
 
     return (
@@ -17,4 +17,4 @@ function PaginaLog() {
     </Principal>);
 }
 
-export default PaginaLog;
+export default Inicio;

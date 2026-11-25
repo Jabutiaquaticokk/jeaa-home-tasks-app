@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import { Trash2, CheckCircle } from "lucide-react";
 
-import "./PaginaTarefas.css"
+import "./Tasks.css"
 
-function PaginaTarefas() {
+function Tasks() {
     const [tarefas, setTarefas] = useState(() => {
         try {
             return JSON.parse(
@@ -104,4 +104,4 @@ function PaginaTarefas() {
 }
 
 
-export default PaginaTarefas;
+export default Tasks;

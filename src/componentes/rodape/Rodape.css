@@ -32,17 +32,16 @@
 
   gap: 3px;
 
-  border: none;
-  background: transparent;
-
+  text-decoration: none;
   color: #87968e;
   font-size: 9px;
 
-  cursor: pointer;
+  transition: all 0.2s ease;
 }
 
 .nav-item.active {
   color: #174e43;
+  font-weight: bold;
 }
 
 .nav-icon {
@@ -60,16 +59,12 @@
   justify-content: center;
 
   background: #174e43;
-  color: #ffffff;
+  color: white;
 
   border-radius: 50%;
   box-shadow: 0 3px 8px rgba(23,78,67,0.3);
 }
 
-.nav-item:has(.create-icon) {
+.nav-create {
   color: #174e43;
-}
-
-.nav-item:has(.create-icon) span {
-  margin-top: -1px;
 }
