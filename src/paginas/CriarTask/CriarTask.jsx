@@ -68,12 +68,6 @@ function CriarTask() {
 
       <section className="task-card">
 
-        <header className="task-header">
-          <div>
-            <h1>Criar task</h1>
-          </div>
-
-        </header>
 
         <div className="form-intro">
           <p>Organize sua próxima tarefa.</p>
